@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "powerpc-lauch",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/freertos_mpc5744p.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "external",
+            "showDevDebugOutput": "raw",
+            "debuggerArgs": [
+                "-nx",
+                "-ex", "set architecture powerpc:common",
+            ],
+            "preLaunchTask": "Start-pegdbserver",
+            "objdumpPath": "powerpc-eabivle-objdump",
+            "gdbPath": "gdb-multiarch",
+            "gdbTarget": ":7224"
+        },
+        {
+            "name": "powerpc-attach",
+            "cwd": "${workspaceFolder}",
+            "executable": "build/GateBoot_Z4.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "external",
+            "showDevDebugOutput": "raw",
+            "debuggerArgs": [
+                "-nx",
+                "-ex", "set architecture powerpc:common",
+            ],
+            "preLaunchTask": "Start-pegdbserver",
+            "objdumpPath": "powerpc-eabivle-objdump.exe",
+            "gdbPath": "gdb-multiarch.exe",
+            "gdbTarget": ":7224"
+        },
+    ]
+}

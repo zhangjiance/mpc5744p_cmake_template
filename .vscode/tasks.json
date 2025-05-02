@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start-pegdbserver",
+            "type": "shell",
+            "command": "pegdbserver_power_console",
+            "args": [
+                "-device=MPC5744P",
+                "-startserver",
+                "-singlesession",
+                "-serverport=7224",
+                "-gdbmiport=6224",
+                // "-interface=USBMULTILINK",
+                "-interface=OPENSDA"
+            ],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "silent"
+            },
+        },
+    ]
+}
