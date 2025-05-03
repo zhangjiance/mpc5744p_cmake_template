@@ -17,7 +17,7 @@ endif()
 set(CMAKE_PROJECT_NAME freertos_mpc5744p)
 
 # Include toolchain file
-include("CMake_Project/powerpc-eabivle_e200z4.cmake")
+include("CMake_Project/powerpc-eabivle-gcc.cmake")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
